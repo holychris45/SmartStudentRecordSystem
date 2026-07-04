@@ -6,5 +6,6 @@ module com.example.ssrmt {
     requires com.dlsc.formsfx;
 
     opens com.example.ssrmt to javafx.fxml;
+    opens com.ssrmt.ui to javafx.fxml;
     exports com.example.ssrmt;
 }

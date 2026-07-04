@@ -33,7 +33,10 @@
 
     <!-- 1. Top Banner Panel -->
     <top>
-        <HBox alignment="CENTER" padding="15.0" style="-fx-background-color: #003366;">
+        <HBox alignment="CENTER"  style="-fx-background-color: #003366;">
+            <padding>
+                <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+            </padding>
             <children>
                 <Label text="SMART STUDENT RECORD MANAGEMENT SYSTEM" textFill="WHITE">
                     <font>
@@ -46,7 +49,10 @@
 
     <!-- 2. Left Form Panel -->
     <left>
-        <GridPane hgap="10.0" padding="15.0" prefWidth="350.0" style="-fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5;" vgap="10.0">
+        <GridPane hgap="10.0" prefWidth="350.0"  style="-fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 5;" vgap="10.0">
+            <padding>
+                <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+            </padding>
             <children>
                 <Label text="Student Data Enrollment" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2">
                     <font>
@@ -104,7 +110,11 @@
                         <Font name="Arial Bold" size="14.0" />
                     </font>
                 </Label>
-                <TableView fx:id="studentTable" columnResizePolicy="CONSTRAINED_RESIZE_POLICY" VBox.vgrow="ALWAYS">
+                <TableView fx:id="studentTable" VBox.vgrow="ALWAYS">
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+
                     <columns>
                         <TableColumn fx:id="colId" text="ID">
                             <cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory>
