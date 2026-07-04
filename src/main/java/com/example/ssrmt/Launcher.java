@@ -1,5 +1,6 @@
 package com.example.ssrmt;
 
+import com.ssrmt.ui.DashboardController;
 import javafx.application.Application;
 
 public class Launcher {
