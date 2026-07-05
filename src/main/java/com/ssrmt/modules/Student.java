@@ -15,6 +15,20 @@ public class Student extends Person {
     }
 
     // Encapsulation with business logic validation
+
+    @Override
+    public String getId() {return super.getId();
+    }
+    public void setId(String id) { this.setId(id); }
+
+    @Override
+    public String getFullName() {
+        return super.getFullName();
+    }
+    public void setFullName(String fullName) {
+        super.setFullName(fullName);
+    }
+
     public String getProgram() { return program; }
     public void setProgram(String program) { this.program = program; }
 
@@ -38,5 +52,9 @@ public class Student extends Person {
     @Override
     public String getRoleDetails() {
         return String.format("Student enrolled in %s (Level %d) with a current GPA of %.2f", program, level, gpa);
+    }
+
+    public String getName() {
+        return "";
     }
 }
